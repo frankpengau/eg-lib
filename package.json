@@ -1,5 +1,5 @@
 {
-  "name": "eg-lib",
+  "name": "@frankpengau/eg-lib",
   "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,6 +14,10 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankpengau/eg-lib.git"
   },
   "devDependencies": {
     "gts": "^6.0.2",
