@@ -10,6 +10,9 @@
     "src/**/*"
   ],
   "exclude": [
-    "src/**/*.d.ts"
+    "lib/**/*.d.ts",
+    "src/**/*.d.ts",
+    "cdk.out",
+    "node_modules"
   ]
 }
