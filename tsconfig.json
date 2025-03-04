@@ -4,6 +4,7 @@
     "rootDir": ".",
     "outDir": "./dist",
     "resolveJsonModule": true,
+    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo"
   },
   "include": [
     "lib/**/*",
