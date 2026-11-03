@@ -1,0 +1,42 @@
+version: 2
+
+multi-ecosystem-groups:
+  pkg-updates:
+    schedule:
+      interval: "monthly"
+
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 7
+    patterns:
+      - '*'
+    multi-ecosystem-group: pkg-updates
+    ignore:
+      # For @types/node, ignore all major version updates.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      # For TypeScript, ignore all major version updates.
+      - dependency-name: "typescript"
+        update-types:
+          ["version-update:semver-major"]
+      # For eslint-plugin-prettier, ignore all major and minor version updates.
+      - dependency-name: "eslint-plugin-prettier"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      # For @typescript-eslint/eslint-plugin, ignore all major and minor version updates.
+      - dependency-name: "@typescript-eslint/eslint-plugin"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 7
+    patterns:
+      - '*'
+    multi-ecosystem-group: pkg-updates
