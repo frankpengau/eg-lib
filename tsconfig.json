@@ -2,18 +2,39 @@
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "./dist",
-    "resolveJsonModule": true,
-    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo"
+    "outDir": "dist",
+    "target": "ES2025",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": [
+      "ES2025"
+    ],
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "jest",
+      "node"
+    ]
   },
-  "include": [
-    "lib/**/*",
-    "src/**/*"
-  ],
   "exclude": [
-    "lib/**/*.d.ts",
-    "src/**/*.d.ts",
-    "cdk.out",
-    "node_modules"
+    "node_modules",
+    "cdk.out"
   ]
 }
