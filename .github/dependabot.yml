@@ -1,16 +1,18 @@
 version: 2
+
+multi-ecosystem-groups:
+  pkg-updates:
+    schedule:
+      interval: "monthly"
+
 updates:
   - package-ecosystem: npm
     directory: "/"
-    registries: "*"
     schedule:
       interval: "monthly"
     cooldown:
       default-days: 7
-    groups:
-      monthly-batch:
-        patterns:
-          - "*"
+    multi-ecosystem-group: pkg-updates
     ignore:
       # For @types/node, ignore all major version updates.
       - dependency-name: "@types/node"
@@ -33,7 +35,4 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 7
-    groups:
-      monthly-batch:
-        patterns:
-          - "*"
+    multi-ecosystem-group: pkg-updates
