@@ -19,6 +19,7 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": false,
+    "sourceMap": false,
     "inlineSourceMap": true,
     "inlineSources": true,
     "experimentalDecorators": true,

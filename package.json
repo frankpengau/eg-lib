@@ -4,7 +4,7 @@
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && tsc",
     "watch": "tsc -w",
     "test": "jest --passWithNoTests",
     "lint": "gts lint",
@@ -34,7 +34,7 @@
     "@aws-cdk/aws-lambda-python-alpha": "2.275.0-alpha.0",
     "@aws-cdk/aws-service-spec": "^0.1.224",
     "@aws-cdk/cloudformation-diff": "^2.179.0",
-    "@aws-cdk/service-spec-types": "^0.0.125",
+    "@aws-cdk/service-spec-types": "^0.0.290",
     "@aws-sdk/client-acm": "^3.1157.0",
     "@aws-sdk/client-api-gateway": "^3.1157.0",
     "@aws-sdk/client-cloudformation": "^3.1157.0",
