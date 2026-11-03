@@ -12,6 +12,8 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 7
+    patterns:
+      - '*'
     multi-ecosystem-group: pkg-updates
     ignore:
       # For @types/node, ignore all major version updates.
@@ -35,4 +37,6 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 7
+    patterns:
+      - '*'
     multi-ecosystem-group: pkg-updates
